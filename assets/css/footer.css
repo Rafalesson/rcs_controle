@@ -1,0 +1,12 @@
+.rodape{
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: .85rem;
+    background-color: #26272B;
+    color: gray;
+}
+
+.autor{
+    color: rgba(0, 172, 55, .5);
+    font-weight: 700;
+}

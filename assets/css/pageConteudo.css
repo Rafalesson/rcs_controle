@@ -1,0 +1,4 @@
+.pageConteudo{
+    display: flex;
+    flex-direction: column;
+}

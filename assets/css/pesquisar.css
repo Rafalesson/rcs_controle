@@ -1,0 +1,55 @@
+.pesquisar{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.pesquisar_boasVindas{
+    width: 100%;
+    padding: 1rem;
+}
+
+.nome_usuario{
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+}
+
+.pesquisar_data{
+    font-size: .8rem;
+    color: gray;
+    padding-bottom: .5rem;
+}
+
+.pesquisar_input{
+    display: flex;
+    padding: 0 1rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.pesquisar_entrada::placeholder{
+    font-size: .9rem;
+    color: gray;
+    
+}
+
+.pesquisar_entrada{
+    height: 2.25rem;
+    background-color: #26272B;
+    border-radius: 10px;
+    padding-left: .5rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, .2);
+    box-sizing: border-box;
+   
+
+}
+
+.pesquisar_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: .5rem;
+    cursor: pointer;
+}

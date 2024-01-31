@@ -1,0 +1,88 @@
+.recomendados{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+}
+
+.recomendados_titulo{
+    padding: .5rem 0;
+    font-size: .9rem;
+    color: gray;
+}
+
+.recomendados_cards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 48%;
+    height: 35vh;
+    box-sizing: border-box;
+    border: 1px solid rgba(128, 128, 128, .2);
+    border-radius: 15px 15px 10px 10px;
+    padding: .2rem;
+}
+
+.card_img{
+    background-image: url("../img/img.png");
+    height: 40%;
+    border-radius: 10px;
+    padding: .5rem;
+}
+
+.card_img_data{
+    padding: .15rem .5rem;
+    color: #33ff73;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, .8);
+    width: 85%;
+    border-radius: 10px;
+    font-size: .85rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card_img_data::before{
+     content: ""; 
+      display: inline-block;
+      width: 1rem; 
+      height: 1rem; 
+      background: url('../img/calendario.png') center center no-repeat; 
+      background-size: contain;
+      margin-right: 5px; 
+}
+
+.img_legenda_calendar{
+    width: 15%;
+    align-self: center;
+}
+
+.card_titulo{
+    padding: 0 .5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.card_endereco{
+    padding: .5rem;
+    font-size: .85rem;
+    color: gray;
+}
+
+.card_btn{
+    font-size: .85rem;
+    font-weight: 700;
+    background-color: rgba(128, 128, 128, .2);
+    width: 90%;
+    align-self: center;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+}

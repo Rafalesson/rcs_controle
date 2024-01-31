@@ -1,0 +1,81 @@
+.agendamentos{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1rem;
+}
+
+.agendamentos_titulo{
+    padding-top: 1rem;
+    font-size: .9rem;
+    color: gray;
+}
+
+.agendamentos_card{
+    background-color: #26272B;
+    border-radius: 10px;
+    margin-top: .5rem;
+    padding: .5rem 0 .5rem .5rem;
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid rgba(128, 128, 128, .2);
+
+}
+
+.card_info{
+    width: 65%;
+}
+
+.card_status{
+    background-color: rgba(0, 172, 55, .2);
+    color: #33ff73;
+    border-radius: 10px;
+    padding: 0 .5rem;
+    font-size: .8rem;
+
+}
+
+.card_servico{
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+.card_loja{
+    display: flex;
+}
+
+.card_loja_logo{
+    width: 15%;
+    border-radius: 10rem;
+    padding: 0 .5rem 0 0;
+}
+
+.card_loja_legenda{
+    font-size: .9rem;
+    align-self: center;
+    color: gray;
+}
+
+.card_data{
+    border-left: 1px solid rgba(128, 128, 128, .2);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+}
+
+.mes{
+    font-size: .8rem;
+}
+
+.dia{
+    padding: .5rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.hora{
+    font-size: .8rem;
+}
