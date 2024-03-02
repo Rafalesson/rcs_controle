@@ -1,0 +1,33 @@
+.adicionar{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.adicionar_boasVindas{
+    width: 100%;
+}
+
+.nome_usuario{
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+}
+
+.adicionar_data{
+    font-size: .8rem;
+    color: gray;
+    padding-bottom: 1rem;
+}
+
+.adicionar_btn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.adicionar_btn_img{
+    width: 60%;
+}
+

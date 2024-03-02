@@ -14,50 +14,61 @@
     background-color: #26272B;
     border-radius: 10px;
     margin-top: .5rem;
-    padding: .5rem 0 .5rem .5rem;
+    padding: .5rem;
     display: flex;
     flex-flow: row wrap;
     border: 1px solid rgba(128, 128, 128, .2);
-
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95%;
+    flex: 1;
 }
 
 .card_info{
     width: 65%;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.card_status{
+.card_info_status{
+    display: flex;
+    justify-content: space-between;
+}
+
+.situacao{
     background-color: rgba(0, 172, 55, .2);
     color: #33ff73;
     border-radius: 10px;
-    padding: 0 .5rem;
+    padding: .1rem .5rem;
     font-size: .8rem;
-
+    align-self: center;
+    margin: 0 1rem;
 }
 
 .card_servico{
     padding: 1rem 0;
     font-size: 1.2rem;
     font-weight: 700;
-    width: 100%;
+    max-width: 98%;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.card_loja{
+.card_artista{
     display: flex;
 }
 
-.card_loja_logo{
-    width: 10%;
-    border-radius: 10rem;
-    padding: 0 .5rem 0 0;
-}
 
-.card_loja_legenda{
+.card_artista_legenda{
     font-size: .9rem;
     align-self: center;
     color: gray;
 }
 
-.card_data{
+.card_data_vencimento{
     border-left: 1px solid rgba(128, 128, 128, .2);
     display: flex;
     flex-flow: column wrap;
@@ -66,16 +77,16 @@
     width: 33%;
 }
 
-.mes{
+.card_data__mes{
     font-size: .8rem;
 }
 
-.dia{
+.card_data__diaMes{
     padding: .5rem 0;
     font-size: 1.2rem;
     font-weight: 700;
 }
 
-.hora{
+.card_data__diaSemana{
     font-size: .8rem;
 }

@@ -15,11 +15,14 @@
         <link rel="stylesheet" href="./assets/css/base.css">
         <link rel="stylesheet" href="./assets/css/cabecalho.css">
         <link rel="stylesheet" href="./assets/css/pageConteudo.css">
-        <link rel="stylesheet" href="./assets/css/pesquisar.css">
+        <link rel="stylesheet" href="./assets/css/adicionar.css">
         <link rel="stylesheet" href="./assets/css/agendamentos.css">
         <link rel="stylesheet" href="./assets/css/recomendados.css">
         <link rel="stylesheet" href="./assets/css/footer.css">
         <link rel="shortcut icon" href="./assets/img/lupa.png" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/css/modal.css">
+
+        <script src="./assets/js/script.js" defer></script>
 
         <title>RCS Controle</title>
     </head>
@@ -32,47 +35,81 @@
         </header>
 
         <main class="pageConteudo">
-            <section class="pesquisar">
-                <article class="pesquisar_boasVindas">
+            <section class="adicionar">
+                <article class="adicionar_boasVindas">
                     <p class="nome_usuario">Olá, Lucas!</p>
-                    <p class="pesquisar_data">Terça, 30 de Janeiro.</p>
+                    <p class="adicionar_data"></p>
                 </article>
 
-                <div class="pesquisar_input">
-                    <input type="text" name="entrada" id="entrada" placeholder="Buscar" class="pesquisar_entrada">
+                <button class="adicionar_btn">
+                    <img src="./assets/img/adicionar.png" alt="lupa de pesquisa" class="adicionar_btn_img">
+                </button>
 
-                    <button class="pesquisar_btn">
-                        <img src="./assets/img/lupa.png" alt="lupa de pesquisa" class="pesquisar_btn_img">
-                    </button>
+                <!-- <section class="modal">
+                    <input type="text" name="musica" id="nome_musica">
+                    <input type="text" name="artista" id="nome_artista">
+
+                    <input type="date" name="entrada" id="data_entrada">
+                    <input type="date" name="saida" id="data_saida">
+                </section> -->
+
+                <div class="modal" id="modal">
+                    <div class="modal-content">
+                        <header class="modal-header">
+                            <h2>Novo Cadastro</h2>
+                            <span class="modal-close" id="modalClose">&#10006;</span>
+                        </header>
+                        <form class="modal-form">
+                            <input type="number" class="modal-field" min="0" placeholder="Posição da música"
+                                id="posicao">
+
+                            <input type="text" class="modal-field" id="nome_musica" placeholder="Nome da música">
+
+                            <input type="text" class="modal-field" id="nome_artista" placeholder="Nome do artista">
+
+                            <label for="data_entrada">Data de entrada</label>
+                            <input type="date" class="modal-field" id="data_entrada">
+
+                            <label for="data_vencimento">Data de vencimento</label>
+                            <input type="date" class="modal-field" id="data_vencimento">
+                        </form>
+                        <footer class="modal-footer">
+                            <button class="button green">Salvar</button>
+                            <button class="button red">Cancelar</button>
+                        </footer>
+                    </div>
                 </div>
 
             </section>
-            <!--Fim "pesquisar"-->
+            <!--Fim "adicionar"-->
 
             <section class="agendamentos">
-                <h2 class="agendamentos_titulo">PRÓXIMO VENCIMENTO</h3>
+                <h2 class="agendamentos_titulo">PRÓXIMO VENCIMENTO</h2>
 
-                    <section class="agendamentos_card">
-                        <div class="card_info">
-                            <span class="card_status">
+                <section class="agendamentos_card">
+                    <div class="card_info">
+                        <div class="card_info_status">
+                            <span class="posicao">#10</span>
+                            <span class="situacao">
                                 Em dia
                             </span>
-                            <h3 class="card_servico">
-                                Nome da Música
-                            </h3>
-                            <figure class="card_loja">
-                                <img src="./assets/img/img.png" alt="logo da loja" class="card_loja_logo">
-
-                                <figcaption class="card_loja_legenda">Nome do Artista</figcaption>
-                            </figure>
                         </div>
 
-                        <article class="card_data">
-                            <p class="mes">Fevereiro</p>
-                            <p class="dia">22</p>
-                            <p class="hora">10:00</p>
-                        </article>
-                    </section>
+                        <h3 class="card_servico">
+                            Nome da Música
+                        </h3>
+
+                        <figure class="card_artista">
+                            <figcaption class="card_artista_legenda">Nome do Artista</figcaption>
+                        </figure>
+                    </div>
+
+                    <article class="card_data_vencimento">
+                        <p class="card_data__diaSemana">Segunda</p>
+                        <p class="card_data__diaMes">22</p>
+                        <p class="card_data__mes">Mês</p>
+                    </article>
+                </section>
             </section>
             <!--FIM "agendamentos"-->
 
@@ -80,30 +117,79 @@
                 <h2 class="recomendados_titulo">LISTA COMPLETA</h2>
 
                 <ul class="recomendados_cards">
-                    <li class="card">
-                        <figure class="card_img">
-                            <figcaption class="card_img_data">
-                                10/10/2024
-                            </figcaption>
-                        </figure>
+                    <li class="agendamentos_card">
+                        <div class="card_info">
+                            <div class="card_info_status">
+                                <span class="posicao">#10</span>
+                                <span class="situacao">
+                                    Em dia
+                                </span>
+                            </div>
 
-                        <h3 class="card_titulo">Nome da Música</h3>
-                        <p class="card_endereco">Nome do Artista</p>
+                            <h3 class="card_servico">
+                                Nome da Música
+                            </h3>
 
-                        <button class="card_btn">Vizualizar</button>
+                            <figure class="card_artista">
+                                <figcaption class="card_artista_legenda">Nome do Artista</figcaption>
+                            </figure>
+                        </div>
+
+                        <article class="card_data_vencimento">
+                            <p class="card_data__diaSemana">Segunda</p>
+                            <p class="card_data__diaMes">22</p>
+                            <p class="card_data__mes">Mês</p>
+                        </article>
                     </li>
 
-                    <li class="card">
-                        <figure class="card_img">
-                            <figcaption class="card_img_data">
-                                22/02/2024
-                            </figcaption>
-                        </figure>
+                    <li class="agendamentos_card">
+                        <div class="card_info">
+                            <div class="card_info_status">
+                                <span class="posicao">#10</span>
+                                <span class="situacao">
+                                    Em dia
+                                </span>
+                            </div>
 
-                        <h3 class="card_titulo">Nome da Música</h3>
-                        <p class="card_endereco">Nome do Artista</p>
+                            <h3 class="card_servico">
+                                Nome da Música
+                            </h3>
 
-                        <button class="card_btn">Vizualizar</button>
+                            <figure class="card_artista">
+                                <figcaption class="card_artista_legenda">Nome do Artista</figcaption>
+                            </figure>
+                        </div>
+
+                        <article class="card_data_vencimento">
+                            <p class="card_data__diaSemana">Segunda</p>
+                            <p class="card_data__diaMes">22</p>
+                            <p class="card_data__mes">Mês</p>
+                        </article>
+                    </li>
+
+                    <li class="agendamentos_card">
+                        <div class="card_info">
+                            <div class="card_info_status">
+                                <span class="posicao">#10</span>
+                                <span class="situacao">
+                                    Em dia
+                                </span>
+                            </div>
+
+                            <h3 class="card_servico">
+                                Nome da Música
+                            </h3>
+
+                            <figure class="card_artista">
+                                <figcaption class="card_artista_legenda">Nome do Artista</figcaption>
+                            </figure>
+                        </div>
+
+                        <article class="card_data_vencimento">
+                            <p class="card_data__diaSemana">Segunda</p>
+                            <p class="card_data__diaMes">22</p>
+                            <p class="card_data__mes">Mês</p>
+                        </article>
                     </li>
                 </ul>
             </section>
@@ -113,7 +199,7 @@
 
         <footer>
             <p class="rodape">
-                 &copy; Copyright 2024 | <a href="https://www.linkedin.com/in/rafael-alesson" target="_blank"
+                &copy; Copyright 2024 | <a href="https://www.linkedin.com/in/rafael-alesson" target="_blank"
                     rel="noopener noreferrer" class="autor">Rafael Alesson</a>
             </p>
         </footer>
