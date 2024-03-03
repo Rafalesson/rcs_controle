@@ -1,208 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!--fim fonte-->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/cabecalho.css" />
+    <link rel="stylesheet" href="./assets/css/pageConteudo.css" />
+    <link rel="stylesheet" href="./assets/css/adicionar.css" />
+    <link rel="stylesheet" href="./assets/css/agendamentos.css" />
+    <link rel="stylesheet" href="./assets/css/recomendados.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/lupa.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/modal.css" />
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--fonte-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-            rel="stylesheet">
-        <!--fim fonte-->
-        <link rel="stylesheet" href="./assets/css/reset.css">
-        <link rel="stylesheet" href="./assets/css/base.css">
-        <link rel="stylesheet" href="./assets/css/cabecalho.css">
-        <link rel="stylesheet" href="./assets/css/pageConteudo.css">
-        <link rel="stylesheet" href="./assets/css/adicionar.css">
-        <link rel="stylesheet" href="./assets/css/agendamentos.css">
-        <link rel="stylesheet" href="./assets/css/recomendados.css">
-        <link rel="stylesheet" href="./assets/css/footer.css">
-        <link rel="shortcut icon" href="./assets/img/lupa.png" type="image/x-icon">
-        <link rel="stylesheet" href="./assets/css/modal.css">
+    <script src="./assets/js/script.js" defer></script>
 
-        <script src="./assets/js/script.js" defer></script>
+    <title>RCS Controle</title>
+  </head>
 
-        <title>RCS Controle</title>
-    </head>
+  <body>
+    <header class="cabecalho">
+      <img
+        src="./assets/img/logo.png"
+        alt="logo do site"
+        class="cabecalho_logo"
+      />
 
-    <body>
-        <header class="cabecalho">
-            <img src="./assets/img/logo.png" alt="logo da barbearia" class="cabecalho_logo">
+      <img
+        src="./assets/img/menuButton.svg"
+        alt="menu sanduíche"
+        class="cabecalho_menu"
+      />
+    </header>
 
-            <img src="./assets/img/menuButton.svg" alt="menu sanduíche" class="cabecalho_menu">
-        </header>
+    <main class="pageConteudo">
+      <section class="adicionar">
+        <article class="adicionar_boasVindas">
+          <p class="nome_usuario">Olá, Lucas!</p>
+          <p class="adicionar_data"></p>
+        </article>
 
-        <main class="pageConteudo">
-            <section class="adicionar">
-                <article class="adicionar_boasVindas">
-                    <p class="nome_usuario">Olá, Lucas!</p>
-                    <p class="adicionar_data"></p>
-                </article>
+        <button class="adicionar_btn">
+          <img
+            src="./assets/img/adicionar.png"
+            alt="lupa de pesquisa"
+            class="adicionar_btn_img"
+          />
+        </button>
 
-                <button class="adicionar_btn">
-                    <img src="./assets/img/adicionar.png" alt="lupa de pesquisa" class="adicionar_btn_img">
-                </button>
+        <section class="modal" id="modal">
+          <div class="modal-content">
+            <header class="modal-header">
+              <h2>Novo Cadastro</h2>
+              <span class="modal-close" id="modalClose">&#10006;</span>
+            </header>
+            <form class="modal-form">
+              <input
+                type="number"
+                class="modal-field"
+                min="0"
+                placeholder="Posição da música"
+                id="posicao"
+                required
+              />
 
-                <!-- <section class="modal">
-                    <input type="text" name="musica" id="nome_musica">
-                    <input type="text" name="artista" id="nome_artista">
+              <input
+                type="text"
+                class="modal-field"
+                id="nome_musica"
+                placeholder="Nome da música"
+                required
+              />
 
-                    <input type="date" name="entrada" id="data_entrada">
-                    <input type="date" name="saida" id="data_saida">
-                </section> -->
+              <input
+                type="text"
+                class="modal-field"
+                id="nome_artista"
+                placeholder="Nome do artista"
+                required
+              />
 
-                <div class="modal" id="modal">
-                    <div class="modal-content">
-                        <header class="modal-header">
-                            <h2>Novo Cadastro</h2>
-                            <span class="modal-close" id="modalClose">&#10006;</span>
-                        </header>
-                        <form class="modal-form">
-                            <input type="number" class="modal-field" min="0" placeholder="Posição da música"
-                                id="posicao">
+              <label for="data_entrada">Data de entrada</label>
+              <input
+                type="date"
+                class="modal-field"
+                id="data_entrada"
+                required
+              />
 
-                            <input type="text" class="modal-field" id="nome_musica" placeholder="Nome da música">
+              <label for="data_vencimento">Data de vencimento</label>
+              <input
+                type="date"
+                class="modal-field"
+                id="data_vencimento"
+                required
+              />
+            </form>
 
-                            <input type="text" class="modal-field" id="nome_artista" placeholder="Nome do artista">
+            <div class="modal-footer">
+              <button class="button green">Salvar</button>
+              <button class="button red">Cancelar</button>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!--Fim "adicionar"-->
 
-                            <label for="data_entrada">Data de entrada</label>
-                            <input type="date" class="modal-field" id="data_entrada">
+      <section class="agendamentos">
+        <h2 class="agendamentos_titulo">PRÓXIMO VENCIMENTO</h2>
 
-                            <label for="data_vencimento">Data de vencimento</label>
-                            <input type="date" class="modal-field" id="data_vencimento">
-                        </form>
-                        <footer class="modal-footer">
-                            <button class="button green">Salvar</button>
-                            <button class="button red">Cancelar</button>
-                        </footer>
-                    </div>
-                </div>
+        <section class="card_vencimento">
+          <div class="card_info">
+            <div class="card_info_status">
+              <span class="posicao">#10</span>
+              <img
+                src="./assets/img/editar.png"
+                alt="ícone de editar"
+                class="editIcon"
+              />
+            </div>
 
-            </section>
-            <!--Fim "adicionar"-->
+            <h3 class="card_servico">Nome da Música</h3>
 
-            <section class="agendamentos">
-                <h2 class="agendamentos_titulo">PRÓXIMO VENCIMENTO</h2>
+            <figure class="card_artista">
+              <figcaption class="card_artista_legenda">
+                Nome do Artista
+              </figcaption>
+            </figure>
+          </div>
 
-                <section class="agendamentos_card">
-                    <div class="card_info">
-                        <div class="card_info_status">
-                            <span class="posicao">#10</span>
-                            <span class="situacao">
-                                Em dia
-                            </span>
-                        </div>
+          <section class="card_data_vencimento">
+            <button class="delete_container">
+              <p class="data__entrada">Entrou em: <br> 22/01/2010</p>
 
-                        <h3 class="card_servico">
-                            Nome da Música
-                        </h3>
+              <img
+                src="./assets/img/bin.png"
+                alt="ícone de editar"
+                class="deleteIcon"
+              />
+            </button>
 
-                        <figure class="card_artista">
-                            <figcaption class="card_artista_legenda">Nome do Artista</figcaption>
-                        </figure>
-                    </div>
+            <div class="data_vencimento">
+              <p class="data__vencimento">
+                Vence em: <br />
+                22/02/1996
+              </p>
+            </div>
+          </section>
+        </section>
+      </section>
+      <!--FIM "agendamentos"-->
 
-                    <article class="card_data_vencimento">
-                        <p class="card_data__diaSemana">Segunda</p>
-                        <p class="card_data__diaMes">22</p>
-                        <p class="card_data__mes">Mês</p>
-                    </article>
-                </section>
-            </section>
-            <!--FIM "agendamentos"-->
+      <section class="recomendados">
+        <h2 class="recomendados_titulo">LISTA COMPLETA</h2>
 
-            <section class="recomendados">
-                <h2 class="recomendados_titulo">LISTA COMPLETA</h2>
+        <ul class="recomendados_cards">
+          <!--   <li class="agendamentos_card">
+            <div class="card_info">
+              <div class="card_info_status">
+                <span class="posicao">#10</span>
+                <span class="situacao"> Em dia </span> 
+              </div>
 
-                <ul class="recomendados_cards">
-                    <li class="agendamentos_card">
-                        <div class="card_info">
-                            <div class="card_info_status">
-                                <span class="posicao">#10</span>
-                                <span class="situacao">
-                                    Em dia
-                                </span>
-                            </div>
+              <h3 class="card_servico">Nome da Música</h3>
 
-                            <h3 class="card_servico">
-                                Nome da Música
-                            </h3>
+              <figure class="card_artista">
+                <figcaption class="card_artista_legenda">
+                  Nome do Artista
+                </figcaption>
+              </figure>
+            </div>
 
-                            <figure class="card_artista">
-                                <figcaption class="card_artista_legenda">Nome do Artista</figcaption>
-                            </figure>
-                        </div>
+            <article class="card_data_vencimento">
+              <p class="card_data__diaSemana">Segunda</p>
+              <p class="card_data__diaMes">22</p>
+              <p class="card_data__mes">Mês</p>
+            </article>
+          </li>
+            -->
+        </ul>
+      </section>
+      <!--FIM "recomendados"-->
+    </main>
+    <!--FIM "pageConteudo"-->
 
-                        <article class="card_data_vencimento">
-                            <p class="card_data__diaSemana">Segunda</p>
-                            <p class="card_data__diaMes">22</p>
-                            <p class="card_data__mes">Mês</p>
-                        </article>
-                    </li>
-
-                    <li class="agendamentos_card">
-                        <div class="card_info">
-                            <div class="card_info_status">
-                                <span class="posicao">#10</span>
-                                <span class="situacao">
-                                    Em dia
-                                </span>
-                            </div>
-
-                            <h3 class="card_servico">
-                                Nome da Música
-                            </h3>
-
-                            <figure class="card_artista">
-                                <figcaption class="card_artista_legenda">Nome do Artista</figcaption>
-                            </figure>
-                        </div>
-
-                        <article class="card_data_vencimento">
-                            <p class="card_data__diaSemana">Segunda</p>
-                            <p class="card_data__diaMes">22</p>
-                            <p class="card_data__mes">Mês</p>
-                        </article>
-                    </li>
-
-                    <li class="agendamentos_card">
-                        <div class="card_info">
-                            <div class="card_info_status">
-                                <span class="posicao">#10</span>
-                                <span class="situacao">
-                                    Em dia
-                                </span>
-                            </div>
-
-                            <h3 class="card_servico">
-                                Nome da Música
-                            </h3>
-
-                            <figure class="card_artista">
-                                <figcaption class="card_artista_legenda">Nome do Artista</figcaption>
-                            </figure>
-                        </div>
-
-                        <article class="card_data_vencimento">
-                            <p class="card_data__diaSemana">Segunda</p>
-                            <p class="card_data__diaMes">22</p>
-                            <p class="card_data__mes">Mês</p>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-            <!--FIM "recomendados"-->
-        </main>
-        <!--FIM "pageConteudo"-->
-
-        <footer>
-            <p class="rodape">
-                &copy; Copyright 2024 | <a href="https://www.linkedin.com/in/rafael-alesson" target="_blank"
-                    rel="noopener noreferrer" class="autor">Rafael Alesson</a>
-            </p>
-        </footer>
-    </body>
-
+    <footer>
+      <p class="rodape">
+        &copy; Copyright 2024 |
+        <a
+          href="https://www.linkedin.com/in/rafael-alesson"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="autor"
+          >Rafael Alesson</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
