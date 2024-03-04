@@ -71,7 +71,7 @@
               <input
                 type="number"
                 class="modal-field"
-                min="0"
+                min="1"
                 placeholder="Posição da música"
                 id="posicao"
                 required
@@ -81,6 +81,7 @@
                 type="text"
                 class="modal-field"
                 id="nome_musica"
+                data-index="new"
                 placeholder="Nome da música"
                 required
               />
@@ -122,76 +123,16 @@
       <section class="agendamentos">
         <h2 class="agendamentos_titulo">PRÓXIMO VENCIMENTO</h2>
 
-        <section class="card_vencimento">
-          <div class="card_info">
-            <div class="card_info_status">
-              <span class="posicao">#10</span>
-              <img
-                src="./assets/img/editar.png"
-                alt="ícone de editar"
-                class="editIcon"
-              />
-            </div>
-
-            <h3 class="card_servico">Nome da Música</h3>
-
-            <figure class="card_artista">
-              <figcaption class="card_artista_legenda">
-                Nome do Artista
-              </figcaption>
-            </figure>
-          </div>
-
-          <section class="card_data_vencimento">
-            <button class="delete_container">
-              <p class="data__entrada">Entrou em: <br> 22/01/2010</p>
-
-              <img
-                src="./assets/img/bin.png"
-                alt="ícone de editar"
-                class="deleteIcon"
-              />
-            </button>
-
-            <div class="data_vencimento">
-              <p class="data__vencimento">
-                Vence em: <br />
-                22/02/1996
-              </p>
-            </div>
-          </section>
-        </section>
+        <ul class="proxVencimento">
+          
+        </ul>
       </section>
       <!--FIM "agendamentos"-->
 
       <section class="recomendados">
         <h2 class="recomendados_titulo">LISTA COMPLETA</h2>
 
-        <ul class="recomendados_cards">
-          <!--   <li class="agendamentos_card">
-            <div class="card_info">
-              <div class="card_info_status">
-                <span class="posicao">#10</span>
-                <span class="situacao"> Em dia </span> 
-              </div>
-
-              <h3 class="card_servico">Nome da Música</h3>
-
-              <figure class="card_artista">
-                <figcaption class="card_artista_legenda">
-                  Nome do Artista
-                </figcaption>
-              </figure>
-            </div>
-
-            <article class="card_data_vencimento">
-              <p class="card_data__diaSemana">Segunda</p>
-              <p class="card_data__diaMes">22</p>
-              <p class="card_data__mes">Mês</p>
-            </article>
-          </li>
-            -->
-        </ul>
+        <ul class="recomendados_cards"></ul>
       </section>
       <!--FIM "recomendados"-->
     </main>
